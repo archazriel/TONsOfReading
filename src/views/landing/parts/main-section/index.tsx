@@ -6,7 +6,6 @@ import animation from '@public/images/intro.gif';
 
 
 
-
 function MainSection() {
 
   return (
@@ -18,7 +17,7 @@ function MainSection() {
             Have you ever pay for book, tutorial, article but never finish it?
           </h1>
           <div className="animation-container">
-            <Image src={animation}/>
+            <Image src={animation} placeholder='blur' blurDataURL={"/images/spiner.gif"}/>
           </div>
           <Link href="/books">
             <a className="get-reading" id="get-reading-button">
