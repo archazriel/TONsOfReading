@@ -1,0 +1,279 @@
+@import "src/styles/functions.scss";
+@import "src/views/landing/parts/how-it-works-flow/styles.scss";
+@import "src/views/landing/parts/how-it-works/styles.scss";
+
+.books-container {
+  //background-image: url("/images/client/about-us-bg.png");
+  background-color: var(--white);
+  background-repeat: no-repeat;
+  background-size: cover 100vh;
+  position: relative;
+  font-family: var(--client-font-family);
+}
+
+.page-head {
+  padding-top: rem(250px);
+  @include f-column;
+  align-items: center;
+
+  h2 {
+    margin-bottom: rem(60px);
+    span {
+      color: var(--green);
+    }
+  }
+
+  p {
+    max-width: rem(780px);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: rem(280px);
+  }
+}
+
+
+.description:first-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.books{
+  margin-bottom: rem(5px);
+  margin-top: rem(5px);
+  padding-top: rem(170px);
+
+  h2 {
+    font-size: rem(54px);
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: rem(140px);
+
+    span {
+      color: var(--green);
+    }
+  }
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.25rem;
+}
+
+.book {
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0px 14px 44px rgba(89, 99, 134, 0.11);
+  border-radius: 16px 16px 60px 16px;
+  padding: rem(15px);
+  padding-bottom: 2.5rem;
+
+  .img {
+    border-radius: var(--border-radius);
+    margin-bottom: 2.5rem;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .book-image-default {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 2.5rem;
+    @include f-center;
+
+    color: var(--green);
+    font-size: 15rem;
+    background-color: var(--green-background);
+    border-radius: var(--border-radius);
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .email {
+    color: var(--additional-gray);
+  }
+}
+
+@include media(1500px) {
+  .book {
+    h4 {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include media(1400px) {
+  .book-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .book {
+    margin-bottom: 1.25rem;
+  }
+}
+
+@include media(1024px) {
+  .book-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-head {
+    padding-top: rem(210px);
+
+    p {
+      margin-bottom: rem(120px);
+    }
+  }
+
+  .section-title {
+    margin-bottom: 4rem;
+  }
+
+  .books{
+    margin-bottom: rem(100px);
+    margin-top: rem(270px);
+
+    h2 {
+      margin-bottom: rem(60px);
+    }
+  }
+}
+
+@include media-md {
+  h2 {
+    margin-bottom: 4.375rem;
+  }
+}
+
+@include media(870px) {
+  .our-values-item {
+    flex-direction: row;
+    margin-bottom: rem(60px);
+
+    &:last-of-type {
+      margin-bottom: 0;
+      width: auto;
+    }
+  }
+
+  .steps {
+    margin-bottom: 0;
+  }
+
+  .books{
+    margin-top: rem(120px);
+  }
+}
+
+@include media-sm {
+  .book {
+    padding-bottom: rem(30px);
+
+    .img {
+      margin-bottom: rem(15px);
+    }
+
+    h4 {
+      margin-bottom: rem(10px);
+    }
+  }
+}
+
+@include media-xs {
+  .page-head {
+    padding-top: rem(180px);
+
+    h1 {
+      margin-top: 5px;
+      margin-bottom: 1.923rem;
+      font-size: 2.769rem;
+      text-align: center;
+      line-height: 3.6rem;
+    }
+
+    h4 {
+      font-size: 1.38rem;
+      padding-bottom: rem(10px);
+      line-height: 1.661rem;
+    }
+
+    p {
+      margin-bottom: rem(110px);
+      font-size: 0.923rem;
+    }
+  }
+
+  .our-values-item {
+    margin-bottom: rem(50px);
+
+    .section-title {
+      margin-top: 5px;
+      margin-bottom: 4rem;
+      font-size: 2.769rem;
+      text-align: center;
+      line-height: 3.6rem;
+    }
+
+    .step {
+      padding: 0px;
+    }
+
+    p {
+      &:first-of-type {
+        font-size: 1.385rem;
+      }
+
+      &:last-of-type {
+        font-size: 0.923rem;
+        width: auto;
+      }
+    }
+  }
+
+  .books{
+    margin-top: rem(130px);
+    margin-bottom: rem(64px);
+
+    h2 {
+      font-size: 2.769rem;
+      margin-bottom: 4rem;
+      margin-top: 5px;
+      text-align: center;
+      line-height: 3.6rem;
+    }
+  }
+
+  .book-list {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .book {
+      margin-bottom: rem(20px);
+      padding: rem(10px) rem(10px) rem(25px);
+    }
+
+    img {
+      margin-bottom: rem(16px);
+    }
+
+    h4 {
+      font-size: 1.538rem;
+      padding-left: rem(15px);
+      margin-bottom: 0;
+      line-height: 2.46rem;
+    }
+
+    p {
+      padding-left: rem(15px);
+      font-size: 1.23rem;
+    }
+  }
+}

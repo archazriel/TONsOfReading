@@ -1,0 +1,132 @@
+
+@import "src/styles/functions.scss";
+@import "src/styles/animations.scss";
+
+.section-title {
+  font-family: var(--client-font-family);
+  line-height: rem(65px);
+  font-weight: 600;
+  font-size: rem(54px);
+  padding: rem(25px) 0 rem(20px);
+  max-width: 370px;
+}
+
+.create-deal {
+  padding: rem(115px) rem(200px) rem(50px) rem(128px);
+  width: 42.7%;
+}
+
+.create-deal-form {
+  padding-top: rem(20px);
+
+  .input-wrapper  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  :global(.input-container) {
+    margin-bottom: rem(30px);
+    max-width: 100%
+  }
+
+  :global(.input-wrapper .input-container:nth-child(-n+2)) {
+    max-width: calc(50% - 15px); 
+  }
+  
+  :global(.input-container .label) {
+    font-family: var(--client-font-family);
+    font-weight: 600;
+    z-index: 3;
+  }
+  
+  :global(.input-container input) {
+    color: var(--font-color);
+  }
+}
+
+@include pulse($color: #11c696, $shadowSpread: 4px);
+
+.controls {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.continue {
+  font-size: rem(20px);
+  line-height: rem(32px);
+  font-family: var(--client-font-family);
+  font-weight: 600;
+  padding: rem(20px) rem(50px);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--white);
+  border: 1px solid var(--green);
+  background: var(--green);
+  margin-top: rem(40px);
+
+  @include button-hover-animate;
+
+  &.disable {
+    opacity: 0.8;
+    pointer-events: none;
+  }
+}
+
+@include media-xl {
+  .create-deal {
+    padding: rem(115px) rem(70px) rem(50px) rem(70px);
+    width: 45%;
+  }
+}
+
+@include media-lg {
+  .create-deal {
+    padding: rem(80px) rem(40px) rem(50px) rem(40px);
+
+    .section-title { 
+      font-size: rem(45px);
+      line-height: rem(55px);
+    }
+  } 
+}
+
+@include media-md {
+  .create-deal-form {
+    :global(.input-wrapper .input-container:nth-child(-n+2)) {
+      max-width: calc(100%); 
+    }
+  }
+}
+
+@include media-sm {
+  .create-deal {
+    padding: rem(80px) rem(30px);
+  }
+  .create-deal {
+    width: 100%;
+  }
+}
+
+@include media-xs { 
+  .create-deal {
+    padding: rem(60px) rem(20px);
+  }
+
+  .section-title {
+    margin-top: 5px;
+    font-size: 2.769rem;
+    text-align: center;
+    line-height: 3.6rem;
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .continue { 
+    margin-top: rem(20px);
+  }
+}
