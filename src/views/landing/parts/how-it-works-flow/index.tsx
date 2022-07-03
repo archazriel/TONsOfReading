@@ -31,7 +31,7 @@ function HowItWorksFlow() {
             <h2>Select what to read</h2>
             <p className="description">
               You are a passionate reader but it is always hard to know if something worth buying it?
-              Or you just one read one novel from the collection?
+              Or you just want to read read one novel from the collection?
               We got you covered, select from thousands books, tutorials, science articles, stories and just start reading it
               <strong> with ability to get your money for unread part back</strong>
             </p>

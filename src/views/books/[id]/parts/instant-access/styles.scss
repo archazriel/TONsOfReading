@@ -1,0 +1,188 @@
+@import "src/styles/functions.scss";
+
+.instant-access {
+  position: relative;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0px 14px 44px rgba(89, 99, 134, 0.11);
+  border-radius: 0 0 rem(128px) 0;
+  background-image: url("/images/client/instant-acess.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 57.3%;
+  font-family: var(--client-font-family);
+}
+
+.logo {
+  margin-bottom: rem(35px);
+  display: block;
+  max-width: 210px;
+  :global(svg){
+    max-width: 100%;
+    max-height: rem(100px);
+  }
+}
+
+.icon-container {
+  height: rem(80px);
+  width: rem(80px);
+  position: absolute;
+  bottom: rem(48px);
+  right: rem(48px);
+}
+
+.page-title {
+  font-size: rem(48px);
+  font-weight: 600;
+  color: var(--main-gray);
+  line-height: rem(58px);
+  padding-bottom: rem(25px);
+  padding-left: rem(25px);
+
+  span {
+    color: var(--green);
+  }
+}
+
+.page-description {
+  font-size: rem(16px);
+  line-height: rem(26px);
+  padding-bottom: rem(50px);
+  p {
+    margin-top: rem(15px);
+  }
+}
+
+.l-list {
+  background: var(--white);
+  border-radius: rem(24px);
+  box-shadow: var(--card-shadow);
+  padding: rem(29px) rem(28px) rem(38px);
+
+  .list {
+    list-style: none;
+
+    &-title {
+      color: var(--main-gray);
+      font-size: rem(24px);
+      line-height: rem(38px);
+      font-weight: 600;
+      padding-bottom: rem(14px);
+    }
+  }
+
+  li {
+    font-size: rem(16px);
+    font-weight: 500;
+    line-height: rem(22px);
+    padding-bottom: rem(20px);
+    position: relative;
+    padding-left: 15px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      margin-right: 8px;
+      height: 6px;
+      width: 6px;
+      line-height: rem(22px);
+      position: absolute;
+      top: rem(7px);
+      left: 0;
+      display: inline-block;
+      border-radius: 50%;
+      background-color: var(--main-blue);
+    }
+  }
+}
+
+@include media-xl {
+  .instant-access {
+    width: 55%;
+  }
+
+  .icon-container {
+    height: rem(70px);
+    width: rem(70px);
+    bottom: rem(38px);
+    right: rem(38px);
+  }
+}
+
+@include media-lg {
+  .instant-access {
+    border-radius: 0 0 rem(64px) 0;
+
+    .section-title {
+      font-size: rem(45px);
+      line-height: rem(55px);
+    }
+  }
+
+  .page-title {
+    font-size: rem(40px);
+    line-height: rem(48px);
+  }
+
+  .icon-container {
+    height: rem(60px);
+    width: rem(60px);
+    bottom: rem(18px);
+    right: rem(18px);
+  }
+}
+
+@include media-sm {
+  .instant-access {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .page-description,
+  .page-title {
+    padding-bottom: rem(25px);
+  }
+}
+
+@include media-xs {
+  .logo {
+    width: 127px;
+  }
+
+  .instant-access {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .icon-container {
+    height: rem(40px);
+    width: rem(40px);
+    bottom: rem(18px);
+    right: rem(18px);
+  }
+
+  .page-title {
+    font-size: rem(32px);
+    line-height: rem(40px);
+  }
+
+  .l-list {
+    .list-title {
+      font-size: 1.385rem;
+    }
+
+    li {
+      font-size: 0.923rem;
+      line-height: rem(25px);
+      padding-bottom: rem(15px);
+    }
+  }
+
+  .page-description {
+    font-size: 0.923rem;
+    line-height: rem(25px);
+    padding-bottom: rem(50px);
+  }
+}
