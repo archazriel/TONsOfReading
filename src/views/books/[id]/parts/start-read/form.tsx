@@ -1,10 +1,10 @@
 import React from 'react';
 import { Field, FieldProps, Form, Formik } from 'formik';
 import classnames from 'classnames';
-
 import TextInput from '@components/common/input';
 
 import styles from './styles.scss';
+import {createAuthorWallet, createChannels, createReaderWallet} from "../../../../../service/ton";
 
 export const required = (value: any) =>
     !value || (typeof value === 'string' && !value.length)
@@ -29,14 +29,16 @@ function StartReadingForm() {
     company: '',
   };
 
-
-  const onSubmit = (values) => {
+  // createReaderWallet();
+  // createAuthorWallet();
+  
+  const onSubmit = async (values) => {
     const objDeal = {
       login: values.login,
       email: values.secretPhrase,
       refundTime: values.refundTime,
     };
-    debugger;
+    // createChannels();
   };
 
   return (

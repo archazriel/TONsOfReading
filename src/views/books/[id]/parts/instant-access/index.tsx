@@ -40,7 +40,7 @@ function InstantAccess({book}) {
           <li>
             We will charge your account balance for each page with no additional fees
             <br/>
-            (only network fee for first transfer and may be charged)
+            (only network fee for first transfer may be charged)
           </li>
           <li>
             Enjoy Reading! If you will see a form to leave a review, and you will write it,
