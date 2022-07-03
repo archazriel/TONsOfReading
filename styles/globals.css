@@ -1,3 +1,6 @@
+@import '../public/fonts/NotoSans/stylesheet.css';
+@import '../public/fonts/icons/style.css';
+
 html,
 body {
   padding: 0;
