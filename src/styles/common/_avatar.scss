@@ -1,0 +1,38 @@
+@import "../functions.scss";
+
+@mixin avatar(
+  $size: rem(122px),
+  $fontSize: rem(38px),
+  $borderRadius: rem(13.6765px)
+) {
+  min-width: $size;
+  width: $size;
+  height: $size;
+  background-color: var(--main-blue);
+  border-radius: $borderRadius;
+  overflow: hidden;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  .avatar-text {
+    color: var(--light-blue);
+    font-size: $fontSize;
+    font-weight: 500;
+    line-height: 1.36842105em;
+
+    user-select: none;
+  }
+
+  .avatar-image,
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

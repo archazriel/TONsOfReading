@@ -1,0 +1,75 @@
+html {
+  // colors
+  --black: #000000;
+  --main-gray: #596386;
+  --additional-gray: rgba(89, 99, 134, 0.6);
+  --manatee: #9097af;
+  --white: #ffffff;
+  --main-blue: #2077f0;
+  --green: #11c696;
+  --background-color: #fafbff;
+  --light-blue: #f0f3ff;
+  --light-blue-background: #f5f9fe;
+  --light-blue-table-line: rgba(224, 234, 245, 0.9);
+  --green-background: rgba(72, 198, 130, 0.1);
+  --gray-background: rgba(89, 99, 134, 0.1);
+  --blue-background: rgba(23, 120, 255, 0.1);
+  --light-gray: rgba(89, 99, 134, 0.3);
+  --strokes: #e1e3e9;
+  --red: #ff5252;
+  --mantis: #78c648;
+  --yellow: #fbbc05;
+  --field-stroke: rgba(89, 99, 134, 0.2);
+  --overlay-background: rgba(0, 19, 77, 0.65);
+  --overlay-client-background: rgba(0, 19, 77, 0.35);
+  --red-background: rgba(255, 82, 82, 0.1);
+  --silver: #c4c4c4;
+  --aluminum-light: rgba(168, 172, 184, 0.6);
+  --white-lighten: rgba(255, 255, 255, 0.7);
+  --bay-of-many-lighten: rgba(43, 54, 146, 0.04);
+  --bay-of-many: #2b3692;
+  --header-bg: rgba(255, 255, 255, 0.87);
+  --bay-of-many-lighten: rgba(43, 54, 146, 0.05);
+  --checkbox-bg: rgba(89, 99, 134, 0.08);
+
+  --green-lighter: rgba(17, 198, 150, 0.1);
+  --main-blue-lighter: rgba(32, 119, 240, 0.1);
+  --client-header: rgba(43, 54, 146, 0.05);
+
+  --green-gradient: linear-gradient(270.86deg, var(--green)  -39.78%, var(--green) 100.1%);
+  
+
+  // Font
+  --font-size: 16px;
+  --font-color: #252525;
+  --font-family: "Noto Sans", sans-serif;
+
+  --client-font-family: Poppins, sans-serif;
+
+  // shadows
+  --box-shadow: 0px 15px 39px rgba(0, 0, 0, 0.08);
+  --button-shadow: 0px 4px 20px rgba(42, 92, 236, 0.2);
+  --green-shadow: 0px 4px 20px rgba(15, 174, 132, 0.2);
+  --card-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+  --client-card-shadow: 0px 10px 28px rgba(89, 99, 134, 0.04);
+  --profile-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+  --checkbox-shadow: 0px 4px 24px rgba(89, 99, 134, 0.15);
+
+  // borders
+  --border: 1px solid var(--strokes);
+  --light-border: 1px solid var(--field-stroke);
+
+  //gradient
+  --yellow-gradient: linear-gradient(
+    33deg,
+    rgba(255, 82, 82, 1) 0%,
+    rgba(251, 188, 5, 1) 32%,
+    rgba(251, 177, 13, 1) 38%,
+    rgba(255, 82, 82, 1) 100%
+  );
+  --border-text: 1px solid rgba(224, 234, 245, 0.9);
+
+  // Others
+  --border-radius: 8px;
+  --transition-time: 0.3s;
+}

@@ -1,0 +1,25 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin pulse($color: #fff, $shadowSpread: 4px) {
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba($color: $color, $alpha: 0.7);
+    }
+    40% {
+      box-shadow: 0 0 0 $shadowSpread rgba($color: $color, $alpha: 0);
+    }
+    80% {
+      box-shadow: 0 0 0 $shadowSpread rgba($color: $color, $alpha: 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba($color: $color, $alpha: 0);
+    }
+  }
+}
