@@ -1,0 +1,28 @@
+@import "src/styles/functions.scss";
+
+.icon-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  transform: rotate(45deg);
+
+  &.vertical {
+    transform: rotate(0);
+  }
+}
+
+.filled {
+  border-radius: 0px 0px 34px 0px;
+}
+
+.lighten {
+  opacity: 0.2;
+
+  &.first,
+  &.last {
+    border-radius: 34px 0px 0px 0px;
+  }
+
+  &.second {
+    border-radius: 0px 0px 0px 34px;
+  }
+}

@@ -1,0 +1,58 @@
+@import "src/styles/functions.scss";
+
+.form-container {
+  width: 100%;
+  max-width: rem(510px);
+  padding: rem(66px);
+  margin: 0 auto;
+
+  .title {
+    font-weight: 500;
+    font-size: rem(45px);
+  }
+
+  .subtitle {
+    color: var(--additional-gray);
+    font-size: 12px;
+    margin-bottom: rem(55px);
+  }
+
+  .input-wrapper {
+    margin-bottom: rem(26px);
+  }
+
+  .buttons-group {
+    text-align: center;
+
+    a {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: var(--main-blue);
+      font-weight: 500;
+      font-size: rem(14px);
+      transition: all var(--transition-time) ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+@include media(1400px) {
+  .form-container {
+    padding: rem(45px);
+  }
+}
+
+@include media-sm {
+  .subtitle {
+    margin-bottom: 2rem;
+  }
+}
+
+@include media-xs {
+  .form-container {
+    padding: 1.5rem;
+  }
+}

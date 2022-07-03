@@ -1,0 +1,260 @@
+@use "sass:math";
+
+$xs: 500px;
+$sm: 768px;
+$md: 960px;
+$lg: 1200px;
+$xl: 1600px;
+
+@mixin icon-color($color) {
+  &::before,
+  &::after {
+    color: $color;
+  }
+  color: $color;
+}
+
+// px to rem
+@function rem($size) {
+  $remSize: math.div($size, 16px);
+  @return #{$remSize}rem;
+}
+
+@function px_to_em($pixels, $context: 16px) {
+  @return math.div($pixels, $context) * 1em;
+}
+
+@function em($size, $context: 16px) {
+  @if unitless($size) {
+    @return px_to_em($size * 1px, $context);
+  } @else if unit($size) == "px" {
+    @return px_to_em($size, $context);
+  } @else {
+    @warn "Not supported value: #{$value}";
+    @return $size;
+  }
+}
+
+@function css-min($numbers...) {
+  @return #{"min(#{$numbers})"};
+}
+
+// line-height with font-size to number
+@function number($lineHeight, $fontSize) {
+  $lineHeightNumber: math.div($lineHeight, $fontSize);
+  @return $lineHeightNumber;
+}
+
+@mixin f-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin f-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin f-stretch {
+  display: flex;
+  align-items: stretch;
+}
+
+@mixin f-start-between {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@mixin f-center-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin f-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin f-center-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin f-stretch-between {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+@mixin f-center-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin f-start-center {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin f-end-start {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+@mixin f-start-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin button {
+  padding: rem(10px);
+  border-radius: var(--border-radius);
+
+  border-width: 1px;
+  border-style: solid;
+
+  font-weight: 500;
+  font-size: rem(14px);
+  line-height: rem(22px);
+
+  transition: all 0.3s;
+}
+
+@mixin button-hover-animate {
+  animation: pulse 3s ease infinite;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid var(--green);
+
+  &:hover {
+    animation: none;
+    color: var(--green);
+    background-color: var(--white);
+  }
+}
+
+@mixin primary-button {
+  @include button;
+
+  background-color: var(--green);
+  border-color: var(--green);
+
+  color: var(--white);
+  &:enabled:hover {
+    background-color: var(--background-color);
+    color: var(--green);
+  }
+}
+
+@mixin secondary-button {
+  @include button;
+
+  background-color: var(--white);
+  color: var(--main-blue);
+
+  border-color: var(--main-blue);
+  &:hover {
+    background-color: var(--main-blue);
+    color: var(--white);
+  }
+}
+
+@mixin scale-hover {
+  transition: all var(--transition-time) ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+@mixin ellipsis($lineNumbers: 1) {
+  -webkit-line-clamp: $lineNumbers;
+  -webkit-box-orient: vertical;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin media($max) {
+  @media screen and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin media-xs {
+  @include media($xs) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @include media($sm) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @include media($md) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @include media($lg) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @include media($xl) {
+    @content;
+  }
+}
+
+@mixin media-min($min) {
+  @media screen and (min-width: $min) {
+    @content;
+  }
+}
+@mixin media-min-max($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+@mixin media-min-sm {
+  @include media-min($sm) {
+    @content;
+  }
+}
+@mixin media-min-md {
+  @include media-min($md) {
+    @content;
+  }
+}
+
+%triangle-bottom {
+  content: "";
+  width: 0;
+  height: 0;
+
+  $size: 1em;
+
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+
+  border-top: $size solid currentColor;
+}

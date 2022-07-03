@@ -1,0 +1,131 @@
+@import "src/styles/functions.scss";
+@import "src/styles/animations.scss";
+
+.logo {
+  display: inline-block;
+}
+
+.footer-navigation {
+  @include f-center-between;
+  margin: rem(50px) auto rem(70px);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.social-networks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+@include pulse($color: #11c696, $shadowSpread: 4px);
+
+.get-started-button {
+  color: var(--white);
+  background-color: var(--green);
+  padding: rem(14px) rem(24px);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-right: rem(30px);
+
+  @include button-hover-animate;
+  
+}
+
+.buttons-group {
+  @include f-center;
+  margin-bottom: rem(70px);
+}
+
+.social-link {
+  color: rgba(89, 99, 134, 0.64);
+  padding: rem(15px);
+  border: 2px solid rgba(89, 99, 134, 0.14);
+  border-radius: var(--border-radius);
+  @include f-center;
+  margin-right: rem(14px);
+  
+  i {
+    font-size: inherit;
+    color: inherit;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.all-right-reserved {
+  color: var(--main-gray);
+  font-weight: 500;
+  padding-bottom: rem(156px);
+}
+
+@include media(1450px) {
+  .footer-navigation {
+    margin: 3.125rem 7.625rem 4.375rem;
+  }
+}
+
+@include media-lg {
+  .footer-navigation {
+    margin: 3.125rem 3.625rem 4.375rem;
+  }
+}
+
+@include media(1024px) {
+  .footer-navigation {
+    font-size: 1rem;
+  }
+}
+
+@include media-md {
+  .footer-navigation {
+    margin: 2.125rem 1rem 3.375rem;
+  }
+}
+
+@include media-sm {
+  .footer-navigation {
+    display: none;
+  }
+
+  .logo {
+    margin-bottom: rem(30px);
+    max-width: 126px;
+
+    :global(svg) {
+      width: 100%;
+    }
+  }
+
+  .get-started-button {
+    margin: 0;
+  }
+
+  .buttons-group {
+    margin-bottom: rem(32px);
+    flex-wrap: wrap;
+  }
+
+  .all-right-reserved {
+    padding-bottom: rem(50px);
+  }
+
+  .all-right-reserved {
+    font-size: 0.923rem;
+    padding-bottom: rem(30px);
+  }
+
+  .social-networks {
+    width: 100%;
+    justify-content: center;
+    margin-top: rem(35px);
+  }
+}
